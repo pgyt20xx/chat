@@ -11,10 +11,18 @@
     <script type="text/javascript" src="/javascripts/bootstrap.min.js"></script>
     <script type="text/javascript" src="/socket.io/socket.io.js"></script>
     <script type="text/javascript" src="/javascripts/chat.js"></script>
+    <script type="text/javascript" src="/javascripts/common.js"></script>
   </head>
   <body>
-    <input type="text" name="message" id="message" />
-    <button id="btn">送信</button>
-    <dl id="list"></dl>
+    <div class="container-fluid">
+      <!-- <input type="text" name="message" id="message" /> -->
+      <div class="pull-right">
+        <textarea name="message" id="message" rows="20" style="width: 100%;"></textarea>
+        <br/>
+        <!-- <button id="btn">送信</button> -->
+        <input  type="button" id="btn" class="btn btn-success byn-mini pull-right" value="POST">
+      </div>
+      <dl id="list"></dl>
+    </div>
   </body>
 </html>

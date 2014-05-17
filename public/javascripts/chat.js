@@ -1,5 +1,6 @@
 $(function() {
   var socket = io.connect('http://chat282.herokuapp.com/');
+  // var socket = io.connect('http://localhost');
   socket.on('connect', function() {
     console.log('connected');
   });
@@ -15,7 +16,7 @@ $(function() {
   socket.on('msg push', function (msg) {
     console.log(msg);
     var date = new Date();
-    $('#list').prepend($('<dt>' + date + '</dt><dd>' + msg + '</dd>'));
+    $('#list').prepend($('<dt>' + getDateAndTime() + '</dt><dd>' + msg + '</dd>'));
   });
   
   socket.on('msg updateDB', function(msg){
