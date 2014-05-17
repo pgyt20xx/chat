@@ -1,5 +1,5 @@
 $(function() {
-  var socket = io.connect('http://localhost');
+  var socket = io.connect('http://chat282.herokuapp.com/');
   socket.on('connect', function() {
     console.log('connected');
   });
