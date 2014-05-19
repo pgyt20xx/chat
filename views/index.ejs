@@ -6,23 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
-    <link  rel="stylesheet" href="stylesheets/bootstrap.min.css">
+    <link  rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script type="text/javascript" src="/javascripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/bootstrap/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="/socket.io/socket.io.js"></script>
     <script type="text/javascript" src="/javascripts/chat.js"></script>
     <script type="text/javascript" src="/javascripts/common.js"></script>
   </head>
   <body>
-    <div class="container-fluid">
-      <!-- <input type="text" name="message" id="message" /> -->
-      <div class="pull-right">
-        <textarea name="message" id="message" rows="20" style="width: 100%;"></textarea>
-        <br/>
-        <!-- <button id="btn">送信</button> -->
-        <input  type="button" id="btn" class="btn btn-success byn-mini pull-right" value="POST">
-      </div>
-      <dl id="list"></dl>
+    <div id="header" class="container-fluid">
+      <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-header">
+          <a href="" class="navbar-brand">chat</a>
+        </div>
+        <ul class="nav navbar-nav navbar-right" style="padding: 0 20px 0 0;">
+          <li><a href="">link1</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="container" style="padding: 20px 0 0 0 ">
+        <div class="row">
+          <div class="col-sm-10">
+            <dl id="list"></dl>          
+          </div>
+          <div class="col-sm-2 hidden-xs">
+            <textarea name="message" id="message" rows="20" style="width: 100%;"></textarea>
+            <br/>
+            <input  type="button" id="btn" class="btn btn-success byn-mini pull-right" value="POST">          
+          </div>
+        </div>
+    </div>
+    <div id="footer" class="container" style="background: gray; margin: 20px 0 0 0; ">
+      footer
     </div>
   </body>
 </html>
