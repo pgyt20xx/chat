@@ -14,7 +14,7 @@
     <script type="text/javascript" src="/javascripts/common.js"></script>
   </head>
   <body>
-    <div id="header" class="container-fluid">
+    <div id="header" class="container">
       <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="navbar-header">
           <a href="" class="navbar-brand">chat</a>
@@ -29,14 +29,14 @@
           <div class="col-sm-10">
             <dl id="list"></dl>          
           </div>
-          <div class="col-sm-2 hidden-xs">
-            <textarea name="message" id="message" rows="20" style="width: 100%;"></textarea>
+          <div class="col-sm-2">
+            <textarea name="message" id="message" style="width: 100%;"></textarea>
             <br/>
             <input  type="button" id="btn" class="btn btn-success byn-mini pull-right" value="POST">          
           </div>
         </div>
     </div>
-    <div id="footer" class="container" style="background: gray; margin: 20px 0 0 0; ">
+    <div id="footer" class="container" style="background: gray; position: absolute; bottom: 0;" >
       footer
     </div>
   </body>
