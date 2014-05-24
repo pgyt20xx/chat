@@ -6,3 +6,17 @@ body {
 a {
   color: #00B7FF;
 }
+
+#footer {
+  background: gray;
+  position: bottom;
+}
+
+#message {
+  width: 100%;
+  position: top;
+}
+ 
+ #list td {
+   width: 50%;
+ }

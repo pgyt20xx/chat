@@ -49,15 +49,16 @@ app.use(function(err, req, res, next) {
     });
 });
 
-var port = process.env.PORT || 80;
+//var port = process.env.PORT || 80;
+var port = 80;
 var io = require('socket.io').listen(app.listen(port));
 io.sockets.on('connection', function (socket) {
     //クライアント側からのイベントを受け取る。
-    socket.on('msg send', function (msg) {
+    socket.on('msgSend', function (msg) {
         //イベントを実行した方に実行する
-        socket.emit('msg push', msg);
+        socket.emit('msgMyPush', msg);
         //イベントを実行した方以外に実行する
-        socket.broadcast.emit('msg push', msg);
+        socket.broadcast.emit('msgOtherPush', msg);
     });
     //接続が解除された時に実行する
     socket.on('disconnect', function() {
