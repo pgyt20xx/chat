@@ -49,8 +49,8 @@ app.use(function(err, req, res, next) {
     });
 });
 
-//var port = process.env.PORT || 80;
-var port = 80;
+var port = process.env.PORT || 80;
+// var port = 80;
 var io = require('socket.io').listen(app.listen(port));
 io.sockets.on('connection', function (socket) {
     //クライアント側からのイベントを受け取る。
